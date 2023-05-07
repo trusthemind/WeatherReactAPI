@@ -1,0 +1,56 @@
+#top {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 5% 10%;
+    padding: 30px;
+}
+
+#currently {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    min-height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+#more {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+#city {
+    font-style: italic;
+    line-break: auto;
+}
+
+#status {
+
+    font-size: 24px;
+}
+
+#icon {
+    width: 100px;
+    height: auto;
+}
+
+#upd span {
+    font-weight: bold;
+    margin-left: 5px;
+}
+#about_t
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#about_t p span {
+    margin-left: 5px;
+}
