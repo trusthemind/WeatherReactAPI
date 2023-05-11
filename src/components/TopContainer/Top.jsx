@@ -5,20 +5,19 @@ import axios from "axios";
 
 function Top({ data }) {
     let [weatherData, setWeatherData] = useState(null)
-
+    let [errorData,setError] = useState(null);
     let connect = async (name) => {
         try {
             const resp = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=9aaf0a75ac754f73b52130424232803&q=${name}&days=1&aqi=no&alerts=no`)
             setWeatherData(resp.data);
         } catch (error) {
-            console.log(error.message);
-            // document.body.innerHTML = <><div id="error">{error.message}</div></>;
+            console.log(error);
+            setError(error.message);
         }
     }
 
     let getValue = (city) => {
         connect(city);
-
     }
     useEffect(() => {
         data(weatherData);
@@ -31,6 +30,7 @@ function Top({ data }) {
         !weatherData ? <><div><h1>Wait a minute, page is loading...</h1></div></> :
             <>
                 <Search onSearch={getValue} />
+                <p id="error">{errorData}</p>
                 <div id="top">
                     <div id="currently">
                         <p id="city">{weatherData.location.name}, {weatherData.location.region}</p>

@@ -14,7 +14,6 @@ function Bottom({ sendData }) {
     }
 
     const filteredArray = weatherData.forecast.forecastday[0].hour.filter((_, index) => index % 2 === 0);
-    console.log(filteredArray);
     return (
         <>
             <div id="bottom">

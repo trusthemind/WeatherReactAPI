@@ -59,7 +59,10 @@
     align-items: center;
 }
 
-
+#error {
+    color: rgb(255, 0, 0);
+    font-weight: 500;
+}
 
 #city {
     font-style: italic;
